@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/23df80987a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Kitchen Blades</title>
 </head>
@@ -11,7 +14,8 @@
     <!-- Navbar -->
     <nav id="main-nav">
         <div class="container">
-            <img src="" alt="Logo" class="logo">
+            <!-- <a><img src="/img/logo.jpg" alt="Logo" class="logo"></a> -->
+            <img src="/img/logo.jpg" alt="Logo" class="logo">
             <div class="Products">
                 <ul>
                     <li><a href="#" target="_blank">Knife storage</a></li>
@@ -21,14 +25,17 @@
                     <li><a href="#" target="_blank">Sharpening Services</a></li>
                 </ul>
             </div>
+            <a class="link">Login</a>
         </div>
     </nav>
 
     <!-- Showcase -->
     <section id="main-showcase">
-        <div class="container">
-            <div class="showcase-content">
-                <btn>Read more</btn>
+        <div class="showcase-container">
+            <div class="showcase-content-box">
+                <h3>Masamoto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, corrupti laudantium pariatur cupiditate quis mollitia.</p>
+                <a class="link">Read more</a>
             </div>
         </div>
     </section>
@@ -37,12 +44,15 @@
     <!-- Main Content -->
     <section id="main-content">
         <div class="container">
-        <h2>Knives</h2>
+        <h2>KNIVES</h2>
 
         <div class="articles-container">
 
                 <article class="card">
-                    <img src="" alt="">
+                    <div class="image-container">
+                        <img src="./img/gyuto.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="text-content">
                         <h3>Chef's Knife</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, obcaecati!</p>
@@ -51,7 +61,10 @@
                 
 
                 <article class="card">
-                    <img src="" alt="">
+                    <div class="image-container">
+                        <img src="./img/santoku.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="text-content">
                         <h3>Santoku</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, obcaecati!</p>
@@ -59,7 +72,10 @@
                 </article>
 
                 <article class="card">
-                    <img src="" alt="">
+                    <div class="image-container">
+                        <img src="./img/sujhiki.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="text-content">
                         <h3>Sujhiki</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, obcaecati!</p>
@@ -67,17 +83,34 @@
                 </article>
 
                 <article class="card">
-                    <img src="" alt="">
+                    <div class="image-container">
+                        <img src="./img/petty.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="text-content">
-                        <h3>Paring Knife</h3>
+                        <h3>Petty</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, obcaecati!</p>
                     </div>
                 </article>
 
                 <article class="card">
-                    <img src="" alt="">
+                    <div class="image-container">
+                        <img src="./img/nakiri.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="text-content">
-                        <h3>Chef's Knife</h3>
+                        <h3>Nakiri</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, obcaecati!</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="image-container">
+                        <img src="./img/kiritsuke.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-content">
+                        <h3>Kiritsuke</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, obcaecati!</p>
                     </div>
                 </article>
@@ -89,22 +122,40 @@
 
 
     <!-- Footer -->
-    <footer id="footer-container">
+    <footer id="main-footer">
+        <div class="footer-container">
+        
+            <div class="guide-links">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="#" class="link-subtle">How To sharpen a knife</a></li>
+                    <li><a href="#" class="link-subtle">Take care of your knife</a></li>
+                    <li><a href="#" class="link-subtle">Maintain a cutting board</a></li>
+                    <li><a href="#" class="link-subtle">About Western knives</a></li>
+                </ul>
+            </div>
 
-        <div>
-            <h3>Popular Guides</h3>
-            <a href="#">How To sharpen a knife</a>
-            <a href="#">Take care of your knife</a>
-            <a href="#">Maintain a cutting board</a>
-            <a href="#">About Western knives</a>
-        </div>
+            
+            <div class="subscribe">
+                <h3>Subscribe</h3>
+                <form>
+                    <input type="email" placeholder="Enter email">
+                    <input type="submit" value="Subscribe" class="btn">
+                </form>
+            </div>
 
-        <div>
-            <h3>Subscribe</h3>
-            <form>
-                <input type="email" placeholder="Enter email">
-                <input type="submit" value="Suscribe" class="btn btn-primary">
-            </form>
+            <div class="social">
+                <h3>Social Media</h3>
+                    <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x link-subtle"></i></a>
+                    <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x link-subtle"></i></a>
+                    <a href="http://fa-instagram.com" target="_blank"><i class="fab fa-instagram fa-2x link-subtle"></i></a>
+                    <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x link-subtle"></i></a>
+            </div>
+
+            <div>
+                <a>Privacy Policy</a>
+                <p>Copyright &copy; 2021, All Rights Reserved</p>
+            </div>
         </div>
     </footer>
 
