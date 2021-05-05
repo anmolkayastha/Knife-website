@@ -1,88 +1,245 @@
-@media(max-width: 500px){
-    #main-nav .container
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* margin: auto;
-        text-align: center; */
-    }
+:root
+{
+    --bright-color-1: #b7a85C;
+    --bright-color-2: #9b786f;
+    --primary-color: #5a5560;
+    --secondary-color: #46344e;
+}
 
-    .logo-container{
-        display: block;
-        padding-bottom: 1rem;
-    }
-    /* Would be better implement a hamburger menu */
+*{
+    margin: 0;
+    padding: 0;
+}
 
-    .products ul{
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-    }
-    
-    #main-nav ul li a{
-        margin: 0 0.6rem 0 0.6rem;
-        padding: 0;
-    }
+body{
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    background: var(--primary-color);
+    color: #f5f5f5;
+}
 
-    /* Showcase */
-    #main-showcase{
-        /* min-height: 100%;
-        min-width: 450px;
+a{
+    color: #f5f5f5;
+    text-decoration: none;
+}
 
-        width: 100%;
-        height: auto; */
-        height: 30vh;
-    }
+.link{
+    cursor: pointer;
+    color: var(--bright-color-1);
+}
 
-    .showcase-container{
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        position: relative;
-    }
+.link:hover
+{
+    border-bottom: var(--bright-color-1) 1px solid;
+}
 
-    .showcase-content-box{
-        display: none;
-        /* max-width: 50%;*/  
-        /* position: relative;
-        width: 20%;
-        height: 20%;
-        margin: auto auto;
-        border: 2px solid green;
-        word-wrap: break-word;
-        overflow: hidden; */
+.link-subtle{
+    cursor: pointer;
+}
 
-    }
+.link-subtle:hover
+{
+    color: var(--bright-color-1);
+} 
 
-    .mobile-showcase
-    {
-        display: block;
-        background: black;
-        font-size: 13px;
-        text-align: center;
-        padding: 1rem;
-    }
+.logo{
+    width: 80px;
+}
+
+ul{
+    list-style: none;
+}
+
+.logo{
+width: 80px;
+}
+
+#main-nav
+{
+    position: sticky;
+    z-index: 2;
+    background: var(--secondary-color)
+}
+
+#main-nav .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    padding: 1.2rem;
+    align-items: center;
+}
+
+#main-nav ul{
+    display: flex;
+    justify-self:left;
+}
+
+#main-nav ul li a{
+    padding: 1.2rem;
+    font-weight: bold;
+    margin: 0 20px 0 20px;
+  }
+
+#main-nav ul li:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+}
+
+#main-nav ul li  a:hover{
+    color: var(--bright-color-1);
+}
 
 
-    #main-content .articles-container{
-        display: flex;
-        flex-direction: column;
-    }
+/* Showcase */
 
-    .card{
-        display: block;
-    }
+#main-showcase
+{
+    background: url('../img/Western-sytle-knife-terminology.jpg') no-repeat center center/cover;
+   height: 100vh;
+}
 
-    #main-footer .footer-container{
-        display: block;
-    }
+.showcase-container
+{
+    display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#main-showcase .showcase-content-box{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 650px;
+    padding: 0.3rem;
+}
+
+.mobile-showcase
+{
+    display: none;
+}
 
 
-    .guide-links, .subscribe, .social{
-        padding: 0.6rem;
-    }
-    .subscribe .btn{
-        margin-top: 10px;
-    }
+/* Main Content */
+#main-content
+{
+    padding: 1.5rem;
+}
+
+#main-content h2
+{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#main-content .articles-container
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.articles-container img{
+    width: 100%;
+}
+
+.card
+{
+    padding: 1.5rem;
+}
+
+.image-container
+{
+    position: relative;
+    width: 100%;
+}
+
+img
+{
+    display: block;
+    /* width: 100%; */
+    height: auto;
+}
+
+/* Overlay not working when hovering over image container */
+.overlay{
+    position: absolute; 
+  bottom: 0; 
+  background: rgba(0, 0, 0, 0.4); /* Black see-through */
+  /* color: #f1f1f1;  */
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  font-size: 20px;
+  padding: 1px;
+}
+
+.image-container:hover .overlay{
+    opacity: 1;
+}
+
+.card .text-content
+{
+    max-width: 80%;
+    text-align: center;
+}
+
+
+/* Footer */
+
+#main-footer{
+    background: var(--secondary-color);
+    padding: 1.5rem;
+}
+#main-footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2.5rem;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.footer-container .subscribe form{
+    padding: 10px;
+}
+
+
+.footer-container .subscribe input{
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    margin-right: 10px;
+}
+.footer-container .subscribe .btn
+{
+    background: var(--bright-color-2);
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+.social{
+    text-align: center;
+}
+
+.social h3{
+    padding-bottom: 10px;
+}
+
+.footer-container .social a{
+    padding: 10px 15px 10px 15px;
+}
+
+#main-footer .footer-container > *:last-child{
+    grid-column: 1 / span4;
+    text-align: center;
+    margin-top: 1.3rem; 
 }
